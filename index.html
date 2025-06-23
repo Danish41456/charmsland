@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charmify – Personalized Jewelry</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 🔔 Announcement -->
+    <div class="announcement-wrapper">
+        <div class="announcement-text">
+            🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀 &nbsp;&nbsp;&nbsp;
+            🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀 &nbsp;&nbsp;&nbsp;
+            🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀 &nbsp;&nbsp;&nbsp;
+            🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀
+        </div>
+    </div>
+
+    <!-- 🔗 Navbar -->
+    <header class="navbar">
+        <div class="logo">Charmify</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="create.html">Create</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="#" class="cart" onclick="toggleCartPopup()">🛒 <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <!-- 🎞️ Hero Banner -->
+    <section class="hero-animated">
+        <!-- Floating Charms -->
+        <img src="images/flower.png" class="charm charm1" alt="Charm 1">
+        <img src="images/butterflycharm.png" class="charm charm2" alt="Charm 2">
+        <img src="images/heartcharm.png" class="charm charm3" alt="Charm 3">
+        <img src="images/key.png" class="charm charm4" alt="Charm 4">
+
+        <!-- Text Overlay -->
+        <div class="hero-content">
+            <h1>Create Your Personalized Charm Bracelet</h1>
+            <p>Drag, design, and wear your story – one charm at a time.</p>
+            <a href="create.html" class="btn">Start Creating</a>
+        </div>
+    </section>
+
+
+    <!-- 🛍️ Product Preview -->
+    <section class="preview">
+        <h2>Featured Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/heartcharm.png" alt="Heart Charm">
+                <h3>Rose Gold Heart</h3>
+                <p>$12.99</p>
+            </div>
+            <div class="product-card">
+                <img src="images/butterflycharm.png" alt="Butterfly Charm">
+                <h3>Butterfly Elegance</h3>
+                <p>$14.50</p>
+            </div>
+            <div class="product-card">
+                <img src="images/braceletbase.png" alt="Bracelet Base">
+                <h3>Base Bracelet</h3>
+                <p>$19.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ❓ FAQ -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button>How do I customize my bracelet?</button>
+            <div class="answer">You can head to our “Create Your Bracelet” page and drag charms onto a bracelet preview!
+            </div>
+        </div>
+        <div class="faq-item">
+            <button>What materials are your charms made from?</button>
+            <div class="answer">Our charms are crafted from stainless steel, rose gold, and enamel for durability and
+                shine.</div>
+        </div>
+        <div class="faq-item">
+            <button>Do you ship internationally?</button>
+            <div class="answer">Yes! We offer worldwide shipping with tracking.</div>
+        </div>
+    </section>
+
+    <!-- 🌟 Reviews -->
+
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div id="floating-reviews-section"></div>
+    </section>
+
+    <!-- Hidden review data (can be placed in reviews section or script) -->
+    <div id="review-data" style="display: none;">
+        <div class="review-item">“Absolutely loved my bracelet. Packaging was adorable too!” – Aisha</div>
+        <div class="review-item">“The charms are beautiful and the customization page is so fun!” – Mei Ling</div>
+        <div class="review-item">“Perfect gift for my best friend. She cried happy tears.” – Emily</div>
+        <div class="review-item">“Lovely packaging and super fast delivery!” – Sara</div>
+        <div class="review-item">“Customizing my bracelet was the best experience!” – Chloe</div>
+        <div class="review-item">“Gave this to my sister and she hasn’t taken it off since!” – Amira</div>
+        <div class="review-item">“The personalization options are so detailed. Love it!” – Zoe</div>
+        <div class="review-item">“Fits perfectly and feels high quality.” – Leah</div>
+        <div class="review-item">“Packaging is so cute I didn’t want to throw it away!” – Cindy</div>
+        <div class="review-item">“Customer service was super helpful and kind.” – Aina</div>
+        <div class="review-item">“Bought one for me and one for my best friend — both gorgeous!” – Fatin</div>
+        <div class="review-item">“Exactly like the photos! Even prettier in person.” – Nurul</div>
+        <div class="review-item">“I get compliments every time I wear mine.” – Jenny</div>
+        <div class="review-item">“The little charms are adorable and meaningful.” – Bella</div>
+        <div class="review-item">“Super easy to use the customizer tool!” – Rachel</div>
+        <div class="review-item">“Fast delivery and great tracking updates.” – Huda</div>
+        <div class="review-item">“Worth every cent. I’ll be ordering more soon!” – Farah</div>
+    </div>
+
+    <!-- 🛒 Cart Popup (Reuse Existing) -->
+    <div class="cart-popup" id="cart-popup">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-btn" onclick="toggleCartPopup()">×</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+    </div>
+
+</body>
+
+</html>

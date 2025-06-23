@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Charmify</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="cart.js"></script>
+</head>
+
+<body>
+
+    <!-- 🔔 Announcement -->
+    <div class="announcement-wrapper">
+        <div class="announcement-text">🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀</div>
+    </div>
+
+    <!-- 🔗 Navbar -->
+    <header class="navbar">
+        <div class="logo">Charmify</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="create.html">Create</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="#" class="cart" onclick="toggleCartPopup()">🛒 <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <!-- 📬 Contact Hero -->
+    <section class="contact-hero">
+        <div class="floating-charm charm1"><img src="images/heartcharm.png" alt="Heart Charm" /></div>
+        <div class="floating-charm charm2"><img src="images/butterflycharm.png" alt="Butterfly Charm" /></div>
+        <div class="floating-charm charm3"><img src="images/star.png" alt="Star Charm" /></div>
+
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Whether you have questions, ideas, or just want to say hi, drop us a message below.
+            </p>
+        </div>
+    </section>
+
+    <!-- ✉️ Contact Form Section -->
+    <section class="contact-section">
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="text" name="subject" placeholder="Subject" />
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> hello@charmify.com</p>
+            <p><strong>Phone:</strong> +60 12-345 6789</p>
+            <p><strong>Address:</strong> 123 Charm Lane, Sibu, Malaysia</p>
+        </div>
+    </section>
+
+    <!-- 🗺️ Google Map (Optional) -->
+    <section class="contact-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997032.2941369326!2d111.67543940119872!3d2.2967622149546834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3211c3e9e11833b9%3A0xe63ea2f142812c4b!2sSibu%2C%20Sarawak!5e0!3m2!1sen!2smy!4v1719141554321!5m2!1sen!2smy"
+            width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- 🛒 Cart Popup (Reuse Existing) -->
+    <div class="cart-popup" id="cart-popup">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-btn" onclick="toggleCartPopup()">×</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+    </div>
+
+</body>
+
+</html>

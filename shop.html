@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charmify – Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="shop.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 🔔 Announcement -->
+    <div class="announcement-wrapper">
+        <div class="announcement-text">🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀</div>
+    </div>
+
+    <!-- 🔗 Navbar -->
+    <header class="navbar">
+        <div class="logo">Charmify</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="create.html">Create</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="#" class="cart" onclick="toggleCartPopup()">🛒 <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="shop">
+        <h1>Our Collection</h1>
+
+        <div class="shop-filters">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('bracelet')">Bracelets</button>
+            <button onclick="filterProducts('charm')">Charms</button>
+        </div>
+
+        <div class="shop-grid" id="product-list">
+            <!-- Products will be inserted here via JS -->
+        </div>
+    </section>
+
+    <!-- 🛒 Cart Popup -->
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-btn" onclick="toggleCartPopup()">×</span>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!-- ✅ create.html (simplified and complete) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Bracelet – Charmify</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="create.js"></script>
+</head>
+
+<body>
+    <!-- 🔔 Announcement -->
+    <div class="announcement-wrapper">
+        <div class="announcement-text">🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀</div>
+    </div>
+
+    <!-- 🔗 Navbar -->S
+    <header class="navbar">
+        <div class="logo">Charmify</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="create.html">Create</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="#" class="cart" onclick="toggleCartPopup()">🛒 <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <!-- ✨ Bracelet Builder Section -->
+    <section class="create-bracelet">
+        <h1>Design Your Bracelet</h1>
+
+        <!-- Wrist Size → controls slot count -->
+        <div class="size-selector">
+            <label for="size">Wrist Size (cm):</label>
+            <select id="size" onchange="generateBraceletSlots()">
+                <option value="14">14 cm</option>
+                <option value="15">15 cm</option>
+                <option value="16">16 cm</option>
+                <option value="17">17 cm</option>
+                <option value="18">18 cm</option>
+            </select>
+        </div>
+
+        <!-- Bracelet preview with dynamic slots -->
+        <div class="bracelet-preview">
+            <div id="bracelet-slots" class="bracelet-slots"></div>
+        </div>
+
+        <!-- Charm gallery -->
+        <div class="charm-selection">
+            <h2>Select Charms</h2>
+            <div class="charm-list">
+                <!-- same draggable charms as shop -->
+                <img src="images/heartcharm.png" draggable="true" class="draggable-charm" alt="Heart Charm">
+                <img src="images/butterflycharm.png" draggable="true" class="draggable-charm" alt="Butterfly Charm">
+                <img src="images/star.png" draggable="true" class="draggable-charm" alt="Star Charm">
+                <img src="images/moon.png" draggable="true" class="draggable-charm" alt="Moon Charm">
+                <img src="images/key.png" draggable="true" class="draggable-charm" alt="Lock Charm">
+                <img src="images/angelwing.png" draggable="true" class="draggable-charm" alt="Angel Wing Charm">
+                <img src="images/flower.png" draggable="true" class="draggable-charm" alt="Flower Charm">
+                <img src="images/minimalist.png" draggable="true" class="draggable-charm" alt="Minimalist Charm">
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛒 Cart Popup (Reuse Existing) -->
+    <div class="cart-popup" id="cart-popup">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-btn" onclick="toggleCartPopup()">×</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+    </div>
+
+</body>
+
+</html>

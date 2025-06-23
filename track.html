@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Order | Charmlands</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="cart.js"></script>
+</head>
+
+<body>
+
+    <!-- 🔔 Announcement -->
+    <div class="announcement-wrapper">
+        <div class="announcement-text">🎀 Free Shipping on orders over $50! Limited Time Offer! 🎀</div>
+    </div>
+
+    <!-- 🔗 Navbar -->
+    <header class="navbar">
+        <div class="logo">Charmify</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="create.html">Create</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="track.html">Track</a>
+            <a href="#" class="cart" onclick="toggleCartPopup()">🛒 <span id="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <!-- 📦 Track Hero Section -->
+    <section class="contact-hero">
+        <!-- Floating Charms -->
+        <div class="floating-charm charm1"><img src="images/star.png" alt="Charm 1"></div>
+        <div class="floating-charm charm2"><img src="images/butterflycharm.png" alt="Charm 2"></div>
+        <div class="floating-charm charm3"><img src="images/heartcharm.png" alt="Charm 3"></div>
+
+        <div class="contact-content">
+            <h1>Track Your Order</h1>
+            <p>Enter your tracking number to check the status of your bracelet delivery.</p>
+        </div>
+    </section>
+
+    <!-- 🔍 Track Form Section -->
+    <section class="contact-section">
+        <div class="contact-form">
+            <form id="trackForm">
+                <input type="text" id="trackingNumber" placeholder="Enter tracking number" required />
+                <button type="submit">Check Status</button>
+            </form>
+            <div id="trackingResult" class="tracking-result"></div>
+        </div>
+    </section>
+
+    <!-- 🛒 Cart Popup (Reuse Existing) -->
+    <div class="cart-popup" id="cart-popup">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-btn" onclick="toggleCartPopup()">×</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+    </div>
+
+</body>
+<script>
+    document.getElementById("trackForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const resultDiv = document.getElementById("trackingResult");
+        const number = document.getElementById("trackingNumber").value.trim();
+
+        // Dummy logic for demo
+        if (!number || number.length < 5) {
+            resultDiv.innerHTML = `<p style="color: crimson;">Invalid tracking number.</p>`;
+        } else {
+            resultDiv.innerHTML = `
+        <h3>Tracking Info</h3>
+        <p><strong>Status:</strong> In Transit</p>
+        <p><strong>Last Location:</strong> Kuching, Sarawak</p>
+        <p><strong>Expected Delivery:</strong> 2-3 working days</p>
+      `;
+        }
+    });
+</script>
+
+</html>
